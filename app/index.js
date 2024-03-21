@@ -1,19 +1,23 @@
-import { Link } from "expo-router";
-import { View, Text, StyleSheet } from "react-native";
+import { Link } from "expo-router"
+import { View, Text, StyleSheet, SafeAreaView, TextInput } from "react-native"
+
+import { AuthForm } from "../components/AuthForm"
 
 export default function Index() {
     return (
-        <View style={ styles.view }>
-            <Text>Home</Text>
+        <SafeAreaView style={ styles.view }>
+            <View>
+                <AuthForm title="Login" />
+            </View>
+            
             <Link href="home">Home Screen</Link>
-        </View>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     view: {
         flex: 1,
-        justifyContent: "center",
         alignItems: "center",
     }
 })
